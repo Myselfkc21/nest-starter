@@ -1,0 +1,11 @@
+{
+  "name": {
+    "sting": "The name must be a string"
+  },
+  "username": {
+    "sting": "The username must be a string"
+  },
+  "password":{
+    "length":"The password must be at least 6 characters long"
+  }
+}
