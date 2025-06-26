@@ -1,11 +1,13 @@
 {
-  "name": {
-    "sting": "The name must be a string"
-  },
   "username": {
-    "sting": "The username must be a string"
+    "isString": "username must be a string",
+    "minLength": "username must be at least 4 characters long",
+    "isAlphanumeric": "username must be alphanumeric"
   },
-  "password":{
-    "length":"The password must be at least 6 characters long"
+
+  "password": {
+    "isString": "password must be a string",
+    "minLength": "password must be at least 8 characters long",
+    "isAlphanumeric": "password must be alphanumeric"
   }
 }
