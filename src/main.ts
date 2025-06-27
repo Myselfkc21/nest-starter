@@ -2,6 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './modules/app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { I18nValidationPipe } from 'nestjs-i18n';
+import { ResponseInterceptor } from './interceptors/duration.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -10,6 +12,7 @@ async function bootstrap() {
       transform: true,
     }),
   );
+    // app.useGlobalInterceptors(new ResponseInterceptor());
 
   const config = new DocumentBuilder()
     .setTitle('My API')

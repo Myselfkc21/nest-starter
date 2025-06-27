@@ -10,6 +10,9 @@ import { User } from 'src/database/entity/user.entity';
 //then we just open the services file of the module
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
+  exports: [UsersService], // Export UsersService to use it in other modules like AuthModule
+  //in the auth module we will import the users module to use the users service
+  //so that we can use the users service in the auth service
   providers: [UsersService],
   controllers: [UsersController],
 })
